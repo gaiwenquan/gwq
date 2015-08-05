@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <bean id="dataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
+        <property name="jndiName">
+            <value>java:comp/env/jdbc/WALLETDS</value>
+        </property>
+    </bean>
+	<bean id="defaultAdapter" class="com.ehking.commons.valuelist.adapter.DefaultMapAdapter" scope="prototype">
+		<property name="useName">
+			<value>false</value>
+		</property>
+		<property name="lowerCase">
+			<value>false</value>
+		</property>
+		<property name="dataSource">
+			<ref bean="dataSource" />
+		</property>
+		<property name="defaultSortColumn">
+			<value>id</value>
+		</property>
+		<property name="defaultSortDirection">
+			<value>desc</value>
+		</property>
+		<property name="showSql">
+			<value>true</value>
+		</property>
+	</bean>
+</beans>

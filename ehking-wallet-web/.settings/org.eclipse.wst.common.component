@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="ehking-wallet-web">
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
+        <wb-resource deploy-path="/" source-path="/target/m2e-wtp/web-resources"/>
+        <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
+        <dependent-module archiveName="ehking-wallet-facade-1.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/ehking-wallet-facade/ehking-wallet-facade">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="ehking-member-facade-1.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/ehking-member-facade/ehking-member-facade">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="ehking-commons-validator-2.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/ehking-commons-validator/ehking-commons-validator">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="ehking-commons-utils-2.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/ehking-commons-utils/ehking-commons-utils">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="ehking-commons-exception-2.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/ehking-commons-exception/ehking-commons-exception">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="ehking-commons-jms-2.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/ehking-commons-jms/ehking-commons-jms">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="ehking-commons-valuelist-2.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/ehking-commons-valuelist/ehking-commons-valuelist">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="ehking-commons-web-2.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/ehking-commons-web/ehking-commons-web">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="ehking-commons-persistence-2.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/ehking-commons-persistence/ehking-commons-persistence">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="ehking-commons-spring-2.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/ehking-commons-spring/ehking-commons-spring">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="ehking-commons-service-2.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/ehking-commons-service/ehking-commons-service">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="ehking-commons-cache-2.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/ehking-commons-cache/ehking-commons-cache">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="ehking-commons-img-2.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/ehking-commons-img/ehking-commons-img">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="ehking-commons-search-2.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/ehking-commons-search/ehking-commons-search">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="ehking-cashier-facade-1.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/ehking-cashier-facade/ehking-cashier-facade">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="ehking-settings-facade-1.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/ehking-settings-facade/ehking-settings-facade">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="ehking-notice-facade-1.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/ehking-notice-facade/ehking-notice-facade">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="ehking-kaptcha-facade-1.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/ehking-kaptcha-facade/ehking-kaptcha-facade">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="ehking-fundaccount-facade-1.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/ehking-fundaccount-facade/ehking-fundaccount-facade">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="ehking-bankchannel-facade-1.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/ehking-bankchannel-facade/ehking-bankchannel-facade">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="ehking-commons-configuration-2.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/ehking-commons-configuration/ehking-commons-configuration">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="ehking-commons-store-2.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/ehking-commons-store/ehking-commons-store">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <property name="java-output-path" value="/ehking-wallet-web/target/classes"/>
+        <property name="context-root" value="wallet"/>
+    </wb-module>
+</project-modules>

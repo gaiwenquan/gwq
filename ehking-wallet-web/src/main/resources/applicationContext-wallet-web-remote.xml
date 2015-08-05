@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	   xmlns:context="http://www.springframework.org/schema/context"
+	   xmlns:mvc="http://www.springframework.org/schema/mvc"
+	   xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd
+       http://www.springframework.org/schema/mvc
+       http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+
+	<bean id="merchantFacade" class="org.springframework.remoting.httpinvoker.HttpInvokerProxyFactoryBean">
+		<property name="serviceUrl" value="${member.webservice}/http/merchantFacade" />
+		<property name="serviceInterface" value="com.ehking.member.merchant.facade.MerchantFacade" />
+	</bean>
+
+	<bean id="memberFacade" class="org.springframework.remoting.httpinvoker.HttpInvokerProxyFactoryBean">
+		<property name="serviceUrl" value="${member.webservice}/http/memberFacade" />
+		<property name="serviceInterface" value="com.ehking.member.facade.MemberFacade" />
+	</bean>
+
+	<bean id="dictionaryFacade" class="org.springframework.remoting.httpinvoker.HttpInvokerProxyFactoryBean">
+		<property name="serviceUrl" value="${settings.webservice}/http/dictionaryFacade"/>
+		<property name="serviceInterface" value="com.ehking.settings.facade.DictionaryFacade"/>
+	</bean>
+
+	<bean id="smsNoticeFacade" class="org.springframework.remoting.httpinvoker.HttpInvokerProxyFactoryBean">
+		<property name="serviceUrl" value="${notice.webservice}/http/smsNoticeFacade"/>
+		<property name="serviceInterface" value="com.ehking.notice.sms.facade.SmsNoticeFacade"/>
+	</bean>
+
+	<bean id="emailNoticeFacade" class="org.springframework.remoting.httpinvoker.HttpInvokerProxyFactoryBean">
+		<property name="serviceUrl" value="${notice.webservice}/http/emailNoticeFacade"/>
+		<property name="serviceInterface" value="com.ehking.notice.email.facade.EmailNoticeFacade"/>
+	</bean>
+
+	<bean id="imageFacade"
+		  class="org.springframework.remoting.httpinvoker.HttpInvokerProxyFactoryBean">
+		<property name="serviceUrl" value="${kaptcha.webservice}/http/imageFacade"/>
+		<property name="serviceInterface" value="com.ehking.kaptcha.image.facade.ImageFacade"/>
+	</bean>
+
+	<!--  账户接口  -->
+	<bean id="accountQueryFacade" class="org.springframework.remoting.httpinvoker.HttpInvokerProxyFactoryBean">
+		<property name="serviceUrl" value="${fundaccount.webservice}/http/accountQueryFacade"/>
+		<property name="serviceInterface" value="com.ehking.fundaccount.facade.AccountQueryFacade"/>
+	</bean>
+
+	<!-- 银行卡信息  start-->
+	<bean id="bankCardFacade" class="org.springframework.remoting.httpinvoker.HttpInvokerProxyFactoryBean">
+		<property name="serviceUrl" value="${bankchannel.webservice}/http/bankCardFacade"/>
+		<property name="serviceInterface" value="com.ehking.bankchannel.bankcard.facade.BankCardFacade"/>
+	</bean>
+	<!-- 银行卡信息  end-->
+
+	<!-- Epos借记卡  start-->
+	<bean id="eposDebitCardFacade" class="org.springframework.remoting.httpinvoker.HttpInvokerProxyFactoryBean">
+		<property name="serviceUrl" value="${bankchannel.webservice}/http/eposDebitCardFacade"/>
+		<property name="serviceInterface" value="com.ehking.bankchannel.epos.debitcard.facade.EposDebitCardFacade"/>
+	</bean>
+	<!-- Epos借记卡  end-->
+
+	<!-- Epos信用卡  start-->
+	<bean id="eposCreditCardFacade" class="org.springframework.remoting.httpinvoker.HttpInvokerProxyFactoryBean">
+		<property name="serviceUrl" value="${bankchannel.webservice}/http/eposCreditCardFacade"/>
+		<property name="serviceInterface" value="com.ehking.bankchannel.epos.creditcard.facade.EposCreditCardFacade"/>
+	</bean>
+	<!-- Epos信用卡  end-->
+
+	<bean id="receiptFacade" class="org.springframework.remoting.httpinvoker.HttpInvokerProxyFactoryBean">
+		<property name="serviceUrl" value="${cashier.webservice}/http/receiptFacade"/>
+		<property name="serviceInterface" value="com.ehking.cashier.facade.ReceiptFacade"/>
+	</bean>
+	
+    <bean id="authBankCardEnhanceFacade" class="org.springframework.remoting.httpinvoker.HttpInvokerProxyFactoryBean">  
+       <property name="serviceUrl" value="${bankchannel.webservice}/http/authBankCardEnhanceFacade"/>
+        <property name="serviceInterface" value="com.ehking.bankchannel.authbankcardenhance.facade.AuthBankCardEnhanceFacade"/>  
+    </bean>
+</beans>

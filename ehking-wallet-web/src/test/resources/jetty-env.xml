@@ -1,0 +1,45 @@
+<?xml version="1.0"  encoding="ISO-8859-1"?>
+<!DOCTYPE Configure PUBLIC "-//Mort Bay Consulting//DTD Configure//EN" "http://www.eclipse.org/jetty/configure_9_0.dtd">
+
+
+<Configure id="server" class="org.eclipse.jetty.webapp.WebAppContext">
+    <New id="configDataSource" class="org.eclipse.jetty.plus.jndi.Resource">
+    	<Arg></Arg>
+        <Arg>jdbc/PROFILEDS</Arg>
+        <Arg>
+            <New class="com.alibaba.druid.pool.DruidDataSource">
+           		<Set name="driverClassName">com.mysql.jdbc.Driver</Set>
+             	<Set name="url">jdbc:mysql://172.19.27.252:3306/dev_profile?characterEncoding=utf-8</Set>
+ 				<Set name="username">ehking-dev</Set>
+                <Set name="password">BmZyqzDmnsK3Q6eW</Set>
+                <Set name="initialSize">1</Set>
+                <Set name="maxActive">1</Set>
+                <Set name="maxWait">60000</Set>
+                <Set name="minEvictableIdleTimeMillis">300000</Set>
+            </New>
+        </Arg>
+	     <Call name="bindToENC">
+	        <Arg>jdbc/PROFILEDS</Arg>  <!-- binds jdbc/myds to java:comp/env/jdbc/myfoo for this webapp -->
+	    </Call>          
+    </New>
+    
+    <New id="walletDataSource" class="org.eclipse.jetty.plus.jndi.Resource">
+    	<Arg></Arg>
+        <Arg>jdbc/WALLETDS</Arg>
+        <Arg>
+            <New class="com.alibaba.druid.pool.DruidDataSource">
+                <Set name="driverClassName">com.mysql.jdbc.Driver</Set>
+                <Set name="url">jdbc:mysql://172.19.27.252:3306/dev_wallet?characterEncoding=utf-8</Set> 
+                <Set name="username">ehking-dev</Set>
+                <Set name="password">BmZyqzDmnsK3Q6eW</Set>  
+                <Set name="initialSize">1</Set>
+                <Set name="maxActive">1</Set>
+                <Set name="maxWait">60000</Set>
+                <Set name="minEvictableIdleTimeMillis">300000</Set>
+            </New>
+        </Arg>
+	     <Call name="bindToENC">
+	        <Arg>jdbc/WALLETDS</Arg>  <!-- binds jdbc/myds to java:comp/env/jdbc/myfoo for this webapp -->
+	    </Call>          
+    </New>
+</Configure>
